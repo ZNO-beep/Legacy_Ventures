@@ -1,0 +1,142 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Heart, Handshake, Trophy, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+
+export default function HomePage() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className="px-4 lg:px-6 h-14 flex items-center">
+        <Link className="flex items-center justify-center" href="#">
+          <Trophy className="h-6 w-6 text-blue-600" />
+          <span className="ml-2 text-2xl font-bold text-gray-900">Legacy Partners</span>
+        </Link>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            About Us
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Our Approach
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Success Stories
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Contact
+          </Link>
+        </nav>
+      </header>
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-blue-50">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                  Your Legacy, Our Commitment
+                </h1>
+                <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
+                  We understand the heart and soul you've poured into your business. Let us help you transition with the
+                  respect and care your legacy deserves.
+                </p>
+              </div>
+              <div className="space-x-4">
+                <Button className="bg-blue-600 text-white hover:bg-blue-700">Start Your Journey</Button>
+                <Button variant="outline">Learn More</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <Card>
+                <CardContent className="pt-4 text-center">
+                  <Heart className="w-10 h-10 mx-auto text-red-500" />
+                  <h2 className="text-lg font-bold mt-4">Preserving Your Legacy</h2>
+                  <p className="text-sm text-gray-500 mt-2">
+                    We honor the business you've built and commit to preserving its core values and culture.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-4 text-center">
+                  <Handshake className="w-10 h-10 mx-auto text-green-500" />
+                  <h2 className="text-lg font-bold mt-4">Fair Partnerships</h2>
+                  <p className="text-sm text-gray-500 mt-2">
+                    Our transparent approach ensures a fair deal that respects your hard work and vision.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-4 text-center">
+                  <Trophy className="w-10 h-10 mx-auto text-yellow-500" />
+                  <h2 className="text-lg font-bold mt-4">Continued Success</h2>
+                  <p className="text-sm text-gray-500 mt-2">
+                    We're committed to growing your business, ensuring its success for years to come.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold text-center mb-12">Voices of Satisfied Partners</h2>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <Card>
+                <CardContent className="pt-4">
+                  <p className="italic text-gray-600">
+                    "Legacy Partners treated my business like their own. They understood its value beyond just numbers."
+                  </p>
+                  <p className="font-semibold mt-4">- Sarah J., Former Owner of Sunshine Cleaning Services</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-4">
+                  <p className="italic text-gray-600">
+                    "I was hesitant to sell, but they showed genuine care for my employees and clients. I couldn't be happier
+                    with the transition."
+                  </p>
+                  <p className="font-semibold mt-4">- Michael R., Former Owner of Tech Solutions Inc.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-4">
+                  <p className="italic text-gray-600">
+                    "Their fair approach and commitment to preserving our company culture made all the difference."
+                  </p>
+                  <p className="font-semibold mt-4">- Lisa M., Former Owner of Green Landscaping Co.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-600 text-white">
+          <div className="container px-4 md:px-6 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Discuss Your Legacy?</h2>
+            <p className="max-w-[600px] mx-auto mb-8">
+              Let's have a conversation about your business's future. We're here to listen, understand, and offer a path
+              forward that honors your hard work.
+            </p>
+            <Button className="bg-white text-blue-600 hover:bg-gray-100">
+              Schedule a Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </section>
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <p className="text-xs text-gray-500">© 2024 Legacy Partners. All rights reserved.</p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <Link className="text-xs hover:underline underline-offset-4" href="#">
+            Terms of Service
+          </Link>
+          <Link className="text-xs hover:underline underline-offset-4" href="#">
+            Privacy
+          </Link>
+        </nav>
+      </footer>
+    </div>
+  )
+}
